@@ -40,13 +40,15 @@
 
 //Ex3
 
-// for(let i=0;i<6;i++){ // first loop is for lines
-//     // we have to log * as many as the number of line , for ex in the second line we should have two * .
-//     for(let j=0;j<i+1;j++){// second loop is for columns 
-//         console.log("*");
-//     }
-//     console.log("\n");// after each column loop finish we have to jump into new line 
-// }
+for(let i=0;i<6;i++){ // first loop is for lines
+    // we have to log * as many as the number of line , for ex in the second line we should have two * .
+    var row=" ";
+    for(let j=0;j<i+1;j++){// second loop is for columns 
+        row+="* "
+    }
+    console.log(row);
+    console.log("\n");// after each column loop finish we have to jump into new line 
+}
 
 //Ex4
 var array = [1, 301, 9, 100, 2, 200, 4] // list for testing
@@ -109,9 +111,11 @@ function checkMinMax(array) {
 // function that prints half a pyramid, with a lenght based on the parameter
 function pyramid(line) {
     for (let i = 0; i < line; i++) { // loop for the rows
+        var row=" ";
         for (let j = 0; j < i + 1; j++) { // loop for the column
-            console.log("*"); // print * to shape a half pyramid
+            row+="* "; // print * to shape a half pyramid
         }
+        console.log(row);
         console.log("\n");
     }
 }
