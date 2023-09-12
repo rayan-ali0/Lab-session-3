@@ -14,3 +14,26 @@ switch (true) {
         console.log("we need to swim a little bit more!");
         break;
 }
+
+//Ex2 
+var array=[20,6,5,200,45,11];
+// initialize a min variable to store the minimum number
+var min = array[0] 
+
+// initialize a max variable to store the max number
+var max = array[0]  
+
+    //for loop to check each item (number) of the array to check if its the smallest number or biggest number so far..
+    for(var i = 0; i < array.length +1; i++){
+        if(array[i] < min){
+            //check if number of the current index is smaller than the current minimum, if it matches the condition, the current index will be stored as the smallest number
+            min = array[i]
+        }
+        
+        if(array[i] > max){
+            //check if number of the current index is greater than the current maxinmum, if it matches the condition, the current index will be stored as the biggest number
+            max = array[i]
+        }       
+    }
+
+ console.log("Min:"+min+"\nMax:"+max);
