@@ -49,18 +49,25 @@
 // }
 
 //Ex4
-var array = [1,301,9,100,2,200,4] // list for testing
-var max = array[0] // initialized a max var to store the biggest number
-// nested loops, first one to iterate from the start till the middle, and the loop inside of it will check rom the last to the middle
-for(var i = 1; i < array.length / 2; i++){
-    if(array[i] > max){
-        max = array[i] //store the current index item if its bigger than the current biggest number
-    }
-    for(var j = array.length -1 ; j >= array.length / 2 ;j--){
-        if(array[j] > max){
-            max = array[j] //store the current index item if its bigger than the current biggest number
+    var array = [1,301,9,100,2,200,4] // list for testing
+    var max = array[0] // initialized a max var to store the biggest number
+    // nested loops, first one to iterate from the start till the middle, and the loop inside of it will check rom the last to the middle
+    for(var i = 1; i < array.length / 2; i++){
+        if(array[i] > max){
+            max = array[i] //store the current index item if its bigger than the current biggest number
         }
-    }
+        for(var j = array.length -1 ; j >= array.length / 2 ;j--){
+            if(array[j] > max){
+                max = array[j] //store the current index item if its bigger than the current biggest number
+            }
+        }
 
+    }
+    console.log("The largest number is "+max);
+
+//Ex5
+// reusable function to get the square of a number
+function square(number){
+    return number*number;
 }
-console.log("The largest number is "+max);
+
